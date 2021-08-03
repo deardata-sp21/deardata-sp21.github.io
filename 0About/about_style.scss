@@ -1,0 +1,232 @@
+
+/*IMPORT FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Roboto:ital,wght@0,300;0,700;0,900;1,300&display=swap');
+
+// Calligraffitti Regular 400
+// Roboto Light 300
+// Roboto Light 300 italic
+// Roboto Bold 700
+// Robot Black 900
+
+
+
+/*VARIABLES*/
+
+
+
+$font_size: 16px;
+$body_padding_L: 30px;
+$border_radius: 8px;
+
+
+
+/*RESPONSIVE LAYOUT*/
+
+
+
+//removes the navigation dot
+@media all and (max-width: 600px) {
+    div.navigation_dot {
+        display: none;
+    }
+}
+
+
+
+/*GENERAL STYLE*/
+
+
+
+body {
+    //margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px $body_padding_L * 5 0px $body_padding_L;
+    font-size: $font_size;
+    background-color: #fafafa;
+}
+h1 {
+    font-family: 'Calligraffitti', cursive;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 60px;
+    margin-top: 35px;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: $font_size + 3px;
+    margin-top: -15px;
+    padding-top: 0px;
+    margin-bottom: 15px;
+}
+p {
+    font-size: $font_size + 2px;
+}
+//specifies transition properties
+.trans {
+    transition: all 0.2s;
+    transition-timing-function: ease;
+    font-size: inherit;
+}
+li {
+    font-size: $font_size + 2px;
+}
+
+
+
+/*Header Style - navigation*/
+
+
+
+//wrapper for Home, About, Blog buttons
+#navigation_wrapper {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    //text
+    font-size: inherit;
+}
+//style for all Home, About, Blog buttons
+.navigation_div {
+    padding: 10px;
+    margin: 0px;
+    //text
+    font-size: inherit;
+    //style
+    border-radius: $border_radius;
+    //transition
+    transition: all 0.2s;
+    transition-timing-function: ease;
+}
+.navigation_div:hover {
+    background-color: #cacaca;
+}
+//decreases padding and increases margin to simulate constriction
+.navigation_div:active {
+    background-color: #FDB515;
+    margin: 2px;
+    padding: 8px;
+    border-radius: $border_radius - 2px;
+}
+//onclick, opens/closes the blog_dropdown to select between assignments
+.blog_select {
+    background-color: #f0f0f0;
+}
+//#blog inherits properties from navigation_div
+#blog:hover{
+    background-color: #cacaca;
+}
+#blog:active {
+    margin: 2px;
+    padding: 8px;
+    background-color: #FDB515;
+    border-radius: $border_radius - 2px;
+}
+
+//style for buttons seperating Home, About, Blog buttons
+.navigation_dot {
+    width: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/*Header Style - dropdown*/
+
+
+
+//dropdown background grey
+#blog_dropdown {
+    padding: 0px;
+    margin: 0px;
+    //style
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    //transition
+    transition: all 0.2s;
+    transition-timing-function: ease;
+    //javascript
+    margin-top: 10px;
+    height: 0px;
+}
+//dropdown, text wrapper
+//requires nested div because display:flex has no transition
+#blog_dropdown_text {
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    //transition
+    transition: all 0.2s;
+    transition-timing-function: ease;
+    //javascript
+    display: none;
+}
+//assignment text
+.assign {
+    margin: 6px;
+    padding: 14px;
+    //style
+    border-radius: 8px;
+    //transition
+    transition: all 0.2s;
+    transition-timing-function: ease;
+}
+.assign:hover {
+    background-color: #cacaca;
+}
+.assign:active {
+    background-color: #FDB515;
+    padding: 10px;
+    margin: 10px;
+}
+// div for the webpage that this is curently on
+// highlights the current webpage, overrides all class properties (including hover properties)
+#curr {
+    background-color: rgb(255, 221, 146);
+}
+
+
+
+/*Content Style*/
+
+
+
+.content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: fit-content;
+}
+
+.quote{
+    font-size: $font_size + 2px;
+    font-style: italic;
+}
+
+.quote_speaker{
+    display: block;
+    padding-left: 15px/2;
+    padding-right: 15px/2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: 10px;
+    width: 85%;
+    border-radius: 20px;
+}
+
+#DebNolan{
+    float: right;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
