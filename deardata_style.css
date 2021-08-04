@@ -44,6 +44,16 @@ p {
   font-size: inherit;
 }
 
+#navigation_wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#blog_dropdown_text a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /*Header Style - navigation*/
 #navigation_wrapper {
   padding: 0px;
